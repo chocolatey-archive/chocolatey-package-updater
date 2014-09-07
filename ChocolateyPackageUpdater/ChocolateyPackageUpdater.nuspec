@@ -39,7 +39,7 @@ This works in conjunction with ketarin to keep the chocolatey packages you maint
     <tags>chocolatey package automatic updater</tags>
     <dependencies>
       <dependency id="nuget.commandline" version="1.6.0" />
-      <dependency id="ketarin" version="[1.6.0.434]" />
+      <dependency id="ketarin" version="1.6.0.434" />
     </dependencies>
   </metadata>
 </package>
