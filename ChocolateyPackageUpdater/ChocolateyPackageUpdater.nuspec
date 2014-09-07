@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ChocolateyPackageUpdater</id>
+    <version>0.6.2.0</version>
+    <title>Chocolatey Automatic Package Updater (for package maintainers)</title>
+    <authors>Rob Reynolds</authors>
+    <owners>Rob Reynolds</owners>
+    <licenseUrl>http://realdimensions.net/licenses/chocolateypackageupdater/license.txt</licenseUrl>
+    <projectUrl>https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers. 
+
+This works in conjunction with ketarin to keep the chocolatey packages you maintain automatically updated. So you don't even have to think about updating a package or keeping it up to date. It just happens. Automatically, in the background, and even faster than you could make it happen. It's almost as if you were the application/tool author.
+
+## FAQs
+
+ 1. Is it magic? I'm not sure. 
+ 2. Does it work? Is like Schwarzenegger hard to spell?
+ 3. How does it work? See the project url for more information.
+ 4. Is it harder than maintaining a package myself? Not really. You pay an initial upfront cost, but it's small compared to maintenance over time.
+ 5. Is it perfect? Is anything?
+ 6. Is it free? Yes! As long as you release your packages openly at chocolatey.org, this is free! If you want to use it for private packages, you will need to pony up some $$.</description>
+    <summary>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers</summary>
+    <releaseNotes>### v0.6.2
+
+ * License does not expire until 12/31/2014
+
+### v0.6.0
+
+ * License does not expire until 6/30/2014
+ * You can define a PS1 file in the package folder to be called by the updater just before packaging. Use it to download files or whatever else might be necessary. The file that it looks for is named ChocoPkgUp.ps1 by default.
+
+### v0.5.6
+
+ * License does not expire until 12/31/2013
+ * The output folder is now a subfolder "_output" of your package folder, allowing you to commit for others to look at later and provide fix pull requests.</releaseNotes>
+    <copyright>2012-Present RealDimensions Software, LLC</copyright>
+    <tags>chocolatey package automatic updater</tags>
+    <dependencies>
+      <dependency id="nuget.commandline" version="1.6.0" />
+      <dependency id="ketarin" version="[1.6.0.434]" />
+    </dependencies>
+  </metadata>
+</package>
