@@ -1,28 +1,50 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package>
   <metadata>
     <id>ChocolateyPackageUpdater</id>
-    <version>0.6.2.0</version>
     <title>Chocolatey Automatic Package Updater (for package maintainers)</title>
+    <version>1.0.0</version>
     <authors>Rob Reynolds</authors>
     <owners>Rob Reynolds</owners>
-    <licenseUrl>http://realdimensions.net/licenses/chocolateypackageupdater/license.txt</licenseUrl>
-    <projectUrl>https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages</projectUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers. 
+    <summary>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers</summary>
+    <description>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers.
 
 This works in conjunction with ketarin to keep the chocolatey packages you maintain automatically updated. So you don't even have to think about updating a package or keeping it up to date. It just happens. Automatically, in the background, and even faster than you could make it happen. It's almost as if you were the application/tool author.
 
+See https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages for creating automatic packages.
+
 ## FAQs
 
- 1. Is it magic? I'm not sure. 
+ 1. Is it magic? I'm not sure.
  2. Does it work? Is like Schwarzenegger hard to spell?
  3. How does it work? See the project url for more information.
  4. Is it harder than maintaining a package myself? Not really. You pay an initial upfront cost, but it's small compared to maintenance over time.
  5. Is it perfect? Is anything?
- 6. Is it free? Yes! As long as you release your packages openly at chocolatey.org, this is free! If you want to use it for private packages, you will need to pony up some $$.</description>
-    <summary>ChocolateyPackageUpdater (chocopkgup) - your automatic package updating solution for package maintainers</summary>
-    <releaseNotes>### v0.6.2
+ 6. Is it free? Yes! As long as you release your packages openly at chocolatey.org, this is free! If you want to use it for private packages, you will need to pony up some $$.
+    </description>
+    <projectUrl>https://github.com/chocolatey/chocolatey-package-updater</projectUrl>
+    <tags>chocolatey package automatic updater</tags>
+    <copyright>2012-Present RealDimensions Software, LLC</copyright>
+    <licenseUrl>http://realdimensions.net/licenses/chocolateypackageupdater/license.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="nuget.commandline" version="2.8.0" />
+      <dependency id="ketarin" version="1.6.0.434" />
+    </dependencies>
+    <releaseNotes>
+### v0.6.4
+
+ * Push to https://chocolatey.org not http - [#10](https://github.com/chocolatey/chocolatey-package-updater/issues/10)
+ * Support passing checksum - [#7](https://github.com/chocolatey/chocolatey-package-updater/issues/7)
+ * Loosen ketarin dependency - [#4](https://github.com/chocolatey/chocolatey-package-updater/issues/4)
+ * Include link to https://github.com/chocolatey/chocolatey-package-updater - [#2](https://github.com/chocolatey/chocolatey-package-updater/issues/2)
+ * Use Get-BinRoot - [#1](https://github.com/chocolatey/chocolatey-package-updater/issues/1)
+
+### v0.6.3
+
+ * License does not expire until 06/30/2014
+
+### v0.6.2
 
  * License does not expire until 12/31/2014
 
@@ -34,12 +56,12 @@ This works in conjunction with ketarin to keep the chocolatey packages you maint
 ### v0.5.6
 
  * License does not expire until 12/31/2013
- * The output folder is now a subfolder "_output" of your package folder, allowing you to commit for others to look at later and provide fix pull requests.</releaseNotes>
-    <copyright>2012-Present RealDimensions Software, LLC</copyright>
-    <tags>chocolatey package automatic updater</tags>
-    <dependencies>
-      <dependency id="nuget.commandline" version="1.6.0" />
-      <dependency id="ketarin" version="1.6.0.434" />
-    </dependencies>
+ * The output folder is now a subfolder "_output" of your package folder, allowing you to commit for others to look at later and provide fix pull requests.
+
+</releaseNotes>
   </metadata>
+  <files>
+    <file src="lib\**" target="tools\chocopkgup" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
