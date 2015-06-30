@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<license id="ce109063-bbe5-4219-9490-b87e65fc0542" expiration="2015-06-30T00:00:00.0000000" type="Standard">
-  <name>Chocolatey.org Updates Only - Bound By Licensing Agreement in License.txt file</name>
+<license id="bee68a2b-95c1-4114-ab0f-50701a1a5a12" expiration="2015-12-31T00:00:00.0000000" type="Standard">
+  <name>Chocolatey.org Updates Only - Bound By Licensing Agreement in License.txt File</name>
   <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
     <SignedInfo>
       <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
@@ -10,9 +10,9 @@
           <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
         </Transforms>
         <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <DigestValue>wX6Mi/J/VSYRtVqHVpHQACDTv3o=</DigestValue>
+        <DigestValue>kP3UYD8KeUfdqVHTqUuTdEFk/WE=</DigestValue>
       </Reference>
     </SignedInfo>
-    <SignatureValue>kFilCnJwp0sOBJwKmycnQ7iVZdx+9OmqYgCC09BI7OOafeaWfZAgTg/gn/tnYefx5PyczdHgrogUrEfdgrstq3kri+9ggyo7huVZCgi2KhZSEzM68r8OCVTk4GwsIUh9mnJbTUnzRpKYOsiqe1Yak/IDsnkjyxLbhJ+uXZYTESo=</SignatureValue>
+    <SignatureValue>YfXOxK4uiQ8Uh/P8hZlnKc2eAI22wXW6wX0irvn4xRrCet7HOji0+Jya3BaJBZJ+eZ22RQOqY5TSqMSeQboecIYA1ogSGC0xNFECunWVt89BnaGFx8NzKfARgnMwbEaCntiA2rcClP5To4uWktbCjlJ14irghnDagH2HjKWrr90=</SignatureValue>
   </Signature>
 </license>
