@@ -1,19 +1,16 @@
-﻿try { 
+﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)" 
+$installDir = Join-Path $toolsDir 'chocopkgup' 
+$installDirBackup = $installDir.Replace("\lib\","\lib-bkp\")
 
-  $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)" 
-  $installFromDir = Join-Path $toolsDir 'chocopkgup' 
+$binRoot = Get-BinRoot
+$oldInstallDir = Join-Path $binRoot 'ChocolateyPackageUpdater'
+$oldInstallDirBackup = Join-Path $binRoot 'ChocolateyPackageUpdater.backup'
 
-  $binRoot = Get-BinRoot
-  $installDir = Join-Path $binRoot 'ChocolateyPackageUpdater'
-  Write-Host "Adding `'$installDir`' to the path and the current shell path"
-  Install-ChocolateyPath "$installDir"
-  $env:Path = "$($env:Path);$installDir"
-  
-  if (![System.IO.Directory]::Exists($installDir)) {[System.IO.Directory]::CreateDirectory($installDir)}
-  Copy-Item "$($installFromDir)\*" "$installDir" -Force -Recurse
-
-  Write-ChocolateySuccess 'ChocolateyPackageUpdater'
-} catch {
-  Write-ChocolateyFailure 'ChocolateyPackageUpdater' "$($_.Exception.Message)"
-  throw 
+if ([System.IO.Directory]::Exists($oldInstallDir)) {
+  Copy-Item "$($oldInstallDir)\chocopkgup.exe.config" "$installDir" -Force -Recurse
+  Copy-Item "$($oldInstallDir)\chocopkgup.exe.config" "$installDirBackup" -Force -Recurse
+  if (![System.IO.Directory]::Exists($oldInstallDirBackup)) {[System.IO.Directory]::CreateDirectory($oldInstallDirBackup)}
+  Copy-Item "$($oldInstallDir)\*" "$oldInstallDirBackup" -Force -Recurse -ErrorAction Continue
+  Write-Warning "Inspect and delete '$oldInstallDirBackup' - new install location is with package"
+  [System.IO.Directory]::Delete($oldInstallDir, $true)
 }

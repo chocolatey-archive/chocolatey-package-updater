@@ -4,5 +4,6 @@
     <add key="PackagesFolder" value="C:\code\mine\chocolateyautomaticpackages" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
     <add key="TokenReplaceFileSearchPattern" value="*.txt|*.nuspec|*.ps1|*.config" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
     <add key="PS1FileToExecute" value="ChocoPkgUp.ps1" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
+    <add key="LatestPackageVersionOnly" value="false" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
   </appSettings>
 </configuration>

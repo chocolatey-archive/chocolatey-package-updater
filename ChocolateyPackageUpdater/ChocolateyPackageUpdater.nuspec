@@ -11,7 +11,7 @@
 
 This works in conjunction with ketarin to keep the chocolatey packages you maintain automatically updated. So you don't even have to think about updating a package or keeping it up to date. It just happens. Automatically, in the background, and even faster than you could make it happen. It's almost as if you were the application/tool author.
 
-See https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages for creating automatic packages.
+See https://chocolatey.org/docs/automatic-packages for creating automatic packages.
 
 ## FAQs
 
@@ -31,10 +31,31 @@ See https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages for creating
       <dependency id="ketarin" version="1.6.0.434" />
     </dependencies>
     <releaseNotes>
+### v0.6.9
+
+ * Allow prerelease versions passed in as the version string (`-` in the version or `1.0.0-beta1`) - [#12](https://github.com/chocolatey/chocolatey-package-updater/issues/12)
+ * Do not edit the version, pass in `--beta` - [#18](https://github.com/chocolatey/chocolatey-package-updater/issues/18)
+ * Pass in `checksumType` and `checksumTypex64` - [#25](https://github.com/chocolatey/chocolatey-package-updater/issues/25)
+ * Only keep the latest files for each package in the _output folder - [#5](https://github.com/chocolatey/chocolatey-package-updater/issues/5)
+ * Use the package directory instead of Get-BinRoot - [#26](https://github.com/chocolatey/chocolatey-package-updater/issues/26)
+
+### v0.6.8
+
+ * Don't fail on invalid license until after packages are generated
+ * Update license
+
+### v0.6.7
+
+ * Update license
+
+### v0.6.6
+
+ * Update license
+
 ### v0.6.5
 
  * Use choco to push packages.
-    
+
 ### v0.6.4
 
  * Push to https://chocolatey.org not http - [#10](https://github.com/chocolatey/chocolatey-package-updater/issues/10)
